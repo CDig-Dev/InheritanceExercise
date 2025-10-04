@@ -28,12 +28,38 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            var woodStock = new Bird();
+            woodStock.WingColor = "yellow";
+            woodStock.CanFly = true;
+            woodStock.DoesMigrate = true;
+            woodStock.BeakLength = 3.5;
+            
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+            var lizzie = new Reptile()
+            {
+                IsColdBlooded = true,
+                HasScales = false,
+                Habitat = "desert",
+                RegenerativeTail = true,
+
+            };
+
+            var myAnimals = new Animal[] { woodStock, lizzie, };
+
+            foreach (var animal in myAnimals)
+            {
+                Console.WriteLine($"Alive:{animal.IsAlive}");
+                Console.WriteLine($"Age:{animal.Age}");
+                Console.WriteLine($"It has :{animal.LegCount} legs");
+                Console.WriteLine($"It lives by the:{animal.LandSeaAir}");
+                Console.WriteLine($"");
+            }
+
         }
     }
 }
